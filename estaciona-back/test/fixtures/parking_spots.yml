@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  coordX: 1.5
+  coordY: 1.5
+  state: 1
+  time_out: 1.5
+
+two:
+  coordX: 1.5
+  coordY: 1.5
+  state: 1
+  time_out: 1.5

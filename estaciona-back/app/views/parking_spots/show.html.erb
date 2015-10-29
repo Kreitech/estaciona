@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Coordx:</strong>
+  <%= @parking_spot.coordX %>
+</p>
+
+<p>
+  <strong>Coordy:</strong>
+  <%= @parking_spot.coordY %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @parking_spot.state %>
+</p>
+
+<p>
+  <strong>Time out:</strong>
+  <%= @parking_spot.time_out %>
+</p>
+
+<%= link_to 'Edit', edit_parking_spot_path(@parking_spot) %> |
+<%= link_to 'Back', parking_spots_path %>

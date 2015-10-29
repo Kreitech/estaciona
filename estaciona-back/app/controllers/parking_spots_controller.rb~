@@ -36,12 +36,12 @@ class ParkingSpotsController < ApplicationController
       @parking_spot.coordX = params[:coordX]
       @parking_spot.coordY = params[:coordY]
       @parking_spot.time_out = params[:time]
-      @parking_spot.save()
+      if (@parking_spot.save())
        	    respond_to do |format|
 	      format.html { head :no_content }
 	      format.json { render :json => '1' }
 	    end
-      
+      end
   end
 
   # GET /parking_spots/1

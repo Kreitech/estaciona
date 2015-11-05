@@ -21,8 +21,8 @@ Rails.application.routes.draw do
 	    get 'getCoords'
 	    post 'getCoords'
 	
-	    get 'leavePlace'
-	    post 'leavePlace'
+	    put 'leavePlace'
+	    put 'parking'
 
 	end
 end

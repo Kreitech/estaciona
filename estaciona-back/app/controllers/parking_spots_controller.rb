@@ -1,5 +1,6 @@
 class ParkingSpotsController < ApplicationController
-  before_action :set_parking_spot, only: [:show, :edit, :update, :destroy]
+#  before_action :set_parking_spot, only: [:show, :edit, :update, :destroy]
+  skip_before_filter :verify_authenticity_token
 
   # GET /parking_spots
   # GET /parking_spots.json
@@ -31,11 +32,25 @@ class ParkingSpotsController < ApplicationController
 
   end
 
+
+  def parking
+      @parking_spot = ParkingSpot.new
+      @parking_spot.coordX = params[:coordX]
+      @parking_spot.coordY = params[:coordY]
+      @parking_spot.state = 1
+      @parking_spot.save()
+ respond_to do |format|
+      format.html { head :no_content }
+      format.json { render :json => '1' }
+    end
+  end
+
   def leavePlace
       @parking_spot = ParkingSpot.new
       @parking_spot.coordX = params[:coordX]
       @parking_spot.coordY = params[:coordY]
       @parking_spot.time_out = params[:time]
+      @parking_spot.state = 2
       @parking_spot.save()
        	    respond_to do |format|
 	      format.html { head :no_content }

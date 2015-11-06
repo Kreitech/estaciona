@@ -1,0 +1,31 @@
+{
+    "cordova-plugin-whitelist": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-whitelist@1"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "plugin.google.maps": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-googlemaps"
+        },
+        "is_top_level": true,
+        "variables": {
+            "API_KEY_FOR_ANDROID": "AIzaSyC-tgw9DzqUhr9RXH7xSbdp0REfhEBku_w",
+            "API_KEY_FOR_IOS": "AIzaSyBGjbTPMLvg01YA1DqQYqdqhkmFgBSD8_Q"
+        }
+    },
+    "com.googlemaps.ios": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/nightstomp/cordova-plugin-googlemaps-sdk",
+            "subdir": ".",
+            "ref": "master"
+        },
+        "is_top_level": false,
+        "variables": {}
+    }
+}
